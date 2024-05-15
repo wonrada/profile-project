@@ -1,4 +1,4 @@
-FROM node:18-alpine3.19
+FROM node:18.15-alpine
 
 WORKDIR /usr/src/app
 
@@ -10,6 +10,8 @@ RUN apk add --update tzdata && \
 
 # Copy package.json and package-lock.json and install production dependencies
 COPY package.json package-lock.json ./
+
+RUN npm cache clean --force
 
 # Install dependencies using npm ci for faster and reliable builds
 RUN npm ci

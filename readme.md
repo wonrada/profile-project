@@ -11,9 +11,9 @@
 
 1. ใช้คำสั่ง
 ```
-    docker compose -f "docker-compose.yml" up -d --build 
+    docker compose up -d --build 
 ```
-เพื่อรันโปรเจค
+เพื่อรันโปรเจค minio
 
 2. การตั้งค่า minio policy ให้เข้าไปที่ http://localhost:9000 username: wonrada, password: wonrada1
 3. ไปที่เมนู Bugkets ที่แถบด้านซ้ายมือ กดเข้าไปจะเจอ Bugket ที่สร้าง
@@ -42,6 +42,19 @@
 ```
 กด set เป็นอันเสร็จสิ้นการตั้งค่า minio
 
+ส่วน frontend จะถูกรันไปพร้อมกับ docker compose sevice ของ backend มีปัญหากับการติดตั้ง node_module 
+
+## การรัน backend
+1. พิมพ์คำสั่ง
+```
+    npm install
+```
+ใน folder backend2
+2. พิมพ์คำสั่ง 
+```
+    npm start
+```
+เพื่อรัน backend 
 
 ## Testing
 
