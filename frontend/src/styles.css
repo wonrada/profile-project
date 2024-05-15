@@ -1,0 +1,360 @@
+/* You can add global styles to this file, and also import other style files */
+body { margin: 0; font-family: 'Sarabun', sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 12px; }
+
+.container{
+  padding: 10px;
+}
+
+.my-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+#mng-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.contain-cover {
+  width: 100%;
+}
+
+.img-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.c-image {
+  position: absolute;
+  top: 160px;
+  /* Adjust position as needed */
+  right: 10px;
+  /* Adjust position as needed */
+  color: #fff;
+  background-color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  cursor: pointer;
+}
+
+.c-image:hover {
+  background-color: #999;
+}
+
+.cover-upload {
+  display: none;
+}
+
+.upload-cover-button {
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 10px;
+}
+
+.upload-cover-text {
+  margin-left: 3px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.contain-profile {
+  position: absolute;
+  top: 200px;
+  left: 3%;
+  /* Position from the left */
+  transform: translateY(-50%);
+}
+
+.img-profile {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100%;
+  background-color: #fff;
+  padding: 5px;
+}
+
+.img-profile:hover {
+  filter: brightness(110%);
+  /* ปรับความสว่างขึ้นเมื่อ hover */
+}
+
+.p-image {
+  position: absolute;
+  top: 135px;
+  /* Adjust position as needed */
+  right: 10px;
+  /* Adjust position as needed */
+  color: #fff;
+  background-color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  cursor: pointer;
+}
+
+.p-image:hover {
+  background-color: #999;
+}
+
+.profile-upload {
+  display: none;
+}
+
+.upload-profile-button {
+  border-radius: 100px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* start line */
+.exp-inf {
+  position: relative;
+  width: 30px;
+  height: inherit;
+  z-index: 2;
+}
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: skyblue;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  z-index: 2;
+}
+.line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3%;
+  height: 100%;
+  background-color: #999;
+  z-index: 1;
+}
+.detail{
+  padding: 10px 0;
+  z-index: 1;
+}
+/* end line */
+
+.exp-button {
+  font-size: 14px;
+  color: skyblue;
+  border: 2px solid skyblue;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+.exp-button:hover {
+  color: white;
+  background-color: skyblue;
+}
+.form-label {
+  font-size: 10px;
+  color: #999;
+}
+.form-control,
+.form-select {
+  height: 30px;
+  font-size: 10px;
+}
+.exp-field .form-control{
+  height: 20px;
+  width: 100%;
+  font-size: 10px;
+}
+.exp-field{
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+}
+.clear-field{
+  position: absolute;
+  top: 8px;
+  left: 94%;
+  background-color: transparent;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 0 solid transparent;
+  color: #999;
+}
+.clear-field:hover{
+  color: #fff;
+  background-color: #999;
+}
+.exp-inf {
+  max-width: 50px;
+  width: 100%;
+  display: inline-block;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.progrss-bar {
+  position: relative;
+  max-width: 300px; /* กำหนดความกว้างของ progress bar ตามที่ต้องการ */
+  width: 100%;
+  height: 10px;
+}
+
+.bg-progress {
+  position: absolute;
+  background-color: #dfdfdf;
+  width: 100%; /* กำหนดความกว้างเต็มของ progress bar */
+  height: 100%;
+  z-index: 1;
+}
+
+.score-progress {
+  position: absolute;
+  background-color: skyblue;
+  height: 100%;
+  z-index: 2;
+}
+
+.clear-skill {
+  font-size: 14px;
+  color: red;
+  border: 2px solid red;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+.clear-skill:hover {
+  color: white;
+  background-color: red;
+}
+
+
+.tag-inf{
+  font-size: 10px;
+  background-color: skyblue;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+.tag-inf:hover{
+  background-color: rgb(91, 149, 172);
+}
+.tag-clear {
+  font-size: 8px;
+  border-radius: 50%; /* Adjust to make it a perfect circle */
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 4px; /* Adjust to move closer to the text */
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  line-height: 5px; /* Center the text vertically */
+  text-align: center; /* Center the text horizontally */
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .more-field .col-md {
+    flex: 0 0 50%;
+    /* Set each column to take up 50% width */
+    max-width: 50%;
+  }
+
+  .form-heigth {
+    height: 60px;
+  }
+
+  .empty-div {
+    display: none;
+  }
+
+  .upload-cover-text {
+    display: none;
+  }
+
+  .contain-profile {
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .img-profile {
+    width: 165px;
+    height: 165px;
+  }
+
+  .p-image {
+    top: 115px;
+    /* Adjust position as needed */
+    right: 10px;
+    /* Adjust position as needed */
+  }
+
+  .progrss-bar {
+    max-width: 200px; /* กำหนดความกว้างของ progress bar ตามที่ต้องการ */
+  }
+
+}
+
+@media (max-width: 770px) {
+  .form-heigth {
+    height: 50px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-md {
+    width: 100%;
+  }
+
+  .more-field .col-md {
+    flex: 100%;
+    /* Set each column to take up 50% width */
+    max-width: 100%;
+  }
+
+  .img-cover {
+    width: 100%;
+    height: 200px;
+  }
+
+  .c-image {
+    top: 150px;
+    /* Adjust position as needed */
+    right: 10px;
+    /* Adjust position as needed */
+  }
+
+  .contain-profile {
+    top: 180px;
+  }
+
+  .progrss-bar {
+    max-width: 125px; /* กำหนดความกว้างของ progress bar ตามที่ต้องการ */
+  }
+
+}
+
+
+.delX{
+  background-color: transparent;
+  color: red;
+  border: 0 solid transparent;
+}

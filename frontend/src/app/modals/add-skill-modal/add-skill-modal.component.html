@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Skill</h1>
+<div mat-dialog-content>
+  <!-- {{msg}} -->
+  <div class="row">
+
+    <div class="col-md my-2">
+      <label for="skillName" class="form-label">SKILL NAME</label>
+      <div>
+        <input class="form-control" id="skillName" type="text" [(ngModel)]="skill.skillName" >
+      </div>
+    </div>
+    <div class="col-md my-2">
+      <label for="rate" class="form-label">RATE YOUR SKILL</label>
+      <div>
+        <input class="form-control" id="rate" type="number" placeholder="x/100" min="1" max="100" [(ngModel)]="skill.rate">
+      </div>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="submit()" cdkFocusInitial>Save</button>
+  <button mat-button [mat-dialog-close]="false">No</button>
+</div>

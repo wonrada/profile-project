@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Other</h1>
+<div mat-dialog-content>
+  <!-- {{msg}} -->
+  <div class="row">
+
+    <div class="col-md my-2">
+      <label for="name" class="form-label">NAME</label>
+      <div>
+        <input class="form-control" id="name" type="text" [(ngModel)]="other.name" >
+      </div>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="submit()" cdkFocusInitial>Save</button>
+  <button mat-button [mat-dialog-close]="false">No</button>
+</div>

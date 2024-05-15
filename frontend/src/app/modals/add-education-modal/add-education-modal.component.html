@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Education</h1>
+<div mat-dialog-content>
+  <!-- {{msg}} -->
+  <div class="row">
+    <div class="col-md my-2">
+      <label for="startYear" class="form-label">START YEAR</label>
+      <div>
+        <input class="form-control" id="startYear" type="number" placeholder="YYYY" min="1800" max="2024" [(ngModel)]="educationForm.startYear">
+      </div>
+    </div>
+    <div class="col-md my-2">
+      <label for="schoolName" class="form-label">SCHOOL NAME</label>
+      <div>
+        <input class="form-control" id="schoolName" type="text" [(ngModel)]="educationForm.schoolName" >
+      </div>
+    </div>
+    <div class="col-md my-2">
+      <label for="educationLevel" class="form-label">LEVEL</label>
+      <div>
+        <input class="form-control" id="educationLevel" type="text" [(ngModel)]="educationForm.educationLevel">
+      </div>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="submit()" cdkFocusInitial>Save</button>
+  <button mat-button [mat-dialog-close]="false">No</button>
+</div>

@@ -1,0 +1,302 @@
+<div class="sticky-container">
+  <button class="sticky-content" (click)="addNewUser()">
+    <!-- Content of the sticky element -->
+    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+  </button>
+</div>
+
+<div class="container">
+  <div class="my-card">
+    <div id="mng-img">
+      <div class="contain-cover">
+        <img [src]="coverImgUrl" class="img-cover" alt="">
+        <i class="fa fa-camera c-image upload-cover-button" (click)="coverImage.click()"><span
+            class="upload-cover-text">
+            EDIT COVER PHOTO</span></i>
+        <input #coverImage type="file" class="cover-upload" id="cover-upload" accept="image/*"
+          (change)="coverImgChange($event)">
+      </div>
+
+      <div class="contain-profile">
+        <img [src]="profileImgUrl" class="img-profile" alt="">
+        <i class="fa fa-camera p-image upload-profile-button" (click)="profileImage.click()"></i>
+        <input #profileImage type="file" class="profile-upload" id="profile-upload" accept="image/*"
+          style="display: none;" (change)="profileImgChange($event)">
+      </div>
+    </div>
+
+    <form [formGroup]="userInfoForm" class="form-detail p-3 ">
+      <div class="form-heigth"></div>
+      <div class="row">
+        <div class="col-md-4 empty-div"></div>
+        <div class="col-md my-2">
+          <label for="username" class="form-label">USERNAME</label>
+          <div>
+            <input class="form-control" id="username" type="text" formControlName="username">
+          </div>
+        </div>
+        <div class="col-md my-2">
+          <label for="nickname" class="form-label">NICK NAME</label>
+          <div>
+            <input class="form-control" id="nickname" type="text" formControlName="nickname">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 empty-div"></div>
+        <div class="col-md my-2">
+          <label for="firstName" class="form-label">FIRST NAME</label>
+          <div>
+            <input class="form-control" id="firstName" type="text" formControlName="firstName">
+          </div>
+        </div>
+        <div class="col-md my-2">
+          <label for="lastName" class="form-label">LAST NAME</label>
+          <div>
+            <input class="form-control" id="lastName" type="text" formControlName="lastName">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 empty-div"></div>
+        <div class="col-md my-2">
+          <label for="position" class="form-label">POSITION</label>
+          <div>
+            <select name="position" id="position" class="form-select" formControlName="position">
+              <option value="" selected readonly>Please Select</option>
+              <option value="Full Stack Developer">Full Stack Developer</option>
+              <option value="Frontend Developer">Frontend Developer</option>
+              <option value="Backend Developer">Backend Developer</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md my-2">
+          <label for="nationality" class="form-label">NATIONALITY</label>
+          <div>
+            <input type="text" name="nationality" id="nationality" class="form-control" formControlName="nationality">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 empty-div"></div>
+        <div class="col-md my-2">
+          <label for="phoneNumber" class="form-label">TELEPHONE NUMBER</label>
+          <div>
+            <input class="form-control" id="phoneNumber" type="text" formControlName="phoneNumber">
+          </div>
+        </div>
+        <div class="col-md my-2">
+          <label for="startDate" class="form-label">STARTING DATE</label>
+          <div>
+            <input class="form-control" id="startDate" type="date" formControlName="startDate">
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <div class="my-card mt-3">
+    <h2>CONTACT INFORMATION</h2>
+    <form [formGroup]="userInfoForm" class="row mt-3">
+      <div class="col-md-2 empty-div"></div>
+      <div class="col-md">
+        <div class="my-2">
+          <label for="address" class="form-label">ADDRESS</label>
+          <div>
+            <input class="form-control" id="address" type="text" formControlName="address">
+          </div>
+        </div>
+
+        <div class="more-field row">
+          <div class="col-md my-2">
+            <label for="subDistrict" class="form-label">SUB DISTRICT</label>
+            <div>
+              <input class="form-control" id="subDistrict" type="text" formControlName="subDistrict">
+            </div>
+          </div>
+          <div class="col-md my-2">
+            <label for="district" class="form-label">DISTRICT</label>
+            <div>
+              <input class="form-control" id="district" type="text" formControlName="district">
+            </div>
+          </div>
+          <div class="col-md my-2">
+            <label for="province" class="form-label">PROVINCE</label>
+            <div>
+              <input class="form-control" id="province" type="text" formControlName="province">
+            </div>
+          </div>
+          <div class="col-md my-2">
+            <label for="postalCode" class="form-label">POSTAL CODE</label>
+            <div>
+              <input class="form-control" id="postalCode" type="text" formControlName="postalCode">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md my-2">
+            <label for="facebookId" class="form-label">FACEBOOK</label>
+            <div>
+              <input class="form-control" id="facebookId" type="text" formControlName="facebookId">
+            </div>
+          </div>
+          <div class="col-md my-2">
+            <label for="lineId" class="form-label">LINE ID</label>
+            <div>
+              <input class="form-control" id="lineId" type="text" formControlName="lineId">
+            </div>
+          </div>
+          <div class="col-md my-2">
+            <label for="instagram" class="form-label">INSTAGRAM</label>
+            <div>
+              <input class="form-control" id="instagram" type="text" formControlName="instagram">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 empty-div"></div>
+    </form>
+  </div>
+
+  <div class="my-card mt-3">
+    <h2>EDUCATIONAL INFORMATION</h2>
+    <div class="row mt-3">
+      <div class="col-md-2 empty-div"></div>
+      <div class="col-md">
+        <div>
+          <button class="exp-button" (click)="addEducation()">ADD EDUCATION</button>
+        </div>
+        <div *ngIf="educationInfo.length > 0">
+          <div class="d-flex" *ngFor="let education of educationInfo">
+            <span class="text-end exp-inf">{{education.startYear}}</span>
+            <div class="exp-inf">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+            <div class="detail">
+              <span class="my-auto text-bold">{{education.schoolName}} [ {{education.educationLevel}} ] </span> <button
+                class="delX" (click)="educationDel(education._id)">x</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-2 empty-div"></div>
+    </div>
+  </div>
+
+  <div class="my-card mt-3">
+    <h2>EXPERIENCE INFORMATION</h2>
+    <div class="row mt-3">
+      <div class="col-md-2 empty-div"></div>
+      <div class="col-md">
+        <div>
+          <button class="exp-button" (click)="addExperience()">ADD EXPERIENCE</button>
+        </div>
+        <div *ngIf="experienceInfo.length > 0">
+          <div class="d-flex" *ngFor="let experience of experienceInfo">
+            <div class="exp-inf">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+            <div class="detail exp-field my-auto">
+              <div>
+                <b>{{experience.role}}</b> <button class="delX" (click)="experienceDel(experience._id)">x</button>
+              </div>
+              <div>
+                {{experience.companyName}}
+              </div>
+              <div style="font-weight: 500;">
+                {{experience.startDate | date}} - {{experience.endDate | date}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2 empty-div"></div>
+    </div>
+  </div>
+
+  <div class="my-card mt-3">
+    <h2>SKILL INFORMATION</h2>
+    <div class="row mt-3">
+      <div class="col-md-2 empty-div"></div>
+      <div class="col-md">
+        <div>
+          <button class="exp-button" (click)="addSkill()">ADD SKILL</button>
+        </div>
+        <div *ngIf="skillInfo.length > 0">
+          <div class="d-flex mt-2" *ngFor="let skill of skillInfo">
+            <div class="col-3 ">
+              <span> {{skill.skillName}}</span>
+            </div>
+            <div class="col-2">
+              <span class="text-center">{{skill.rate}}</span>
+            </div>
+            <div class="progrss-bar col-5 my-auto">
+              <div class="score-progress" [style.width.%]="skill.rate"></div>
+              <div class="bg-progress"></div>
+            </div>
+            <div class="col-2 mx-3 my-auto">
+              <button class="exp-button clear-skill" (click)="skillDel(skill._id)">x</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2 empty-div"></div>
+    </div>
+  </div>
+
+  <div class="my-card mt-3">
+    <h2>INTERESTS INFORMATION</h2>
+    <div class="row mt-3">
+      <div class="col-md-2 empty-div"></div>
+      <div class="col-md">
+        <div>
+          <button class="exp-button" (click)="addInterest()">ADD INTERESTS</button>
+        </div>
+        <div *ngIf="interestInfo.length > 0">
+          <div class="d-flex mt-2">
+            <div class="pe-1" *ngFor="let interest of interestInfo">
+              <div class="tag-inf">
+                {{interest.interestName}} <button class="tag-clear" (click)="interestDel(interest._id)">x</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2 empty-div"></div>
+    </div>
+  </div>
+
+  <div class="my-card mt-3">
+    <h2>GUILD INFORMATION</h2>
+    <div class="row mt-3">
+      <div class="col-md-2 empty-div"></div>
+      <div class="col-md">
+        <div>
+          <button class="exp-button" (click)="addGuild()">ADD GUILD</button>
+        </div>
+        <div *ngIf="guildInfo.length > 0">
+          <div class="d-flex mt-2">
+            <div class="pe-1" *ngFor="let guild of guildInfo">
+              <div class="tag-inf">
+                {{guild.guildName}} <button class="tag-clear" (click)="guildDel(guild._id)">x</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 empty-div"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.sticky-container {
+  position: fixed;
+  bottom: 20px; /* Adjust the distance from the bottom */
+  right: 20px; /* Adjust the distance from the right */
+  z-index: 999; /* Ensure the sticky element stays on top */
+}
+
+.sticky-content {
+  background-color:skyblue; /* Background color of the sticky element */
+  color: #fff; /* Text color */
+  padding: 20px; /* Padding around the content */
+  border-radius: 100%; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+  font-size: 30px;
+  border: 0 solid transparent;
+}
+
+.sticky-content:hover {
+  background-color:rgb(81, 154, 184); /* Background color of the sticky element */
+  color: #fff; /* Text color */
+}
